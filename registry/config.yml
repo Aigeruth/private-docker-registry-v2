@@ -1,0 +1,11 @@
+version: 0.1
+log:
+  level: warn
+  formatter: text
+storage:
+  filesystem:
+    rootdirectory: /data
+  cache:
+    layerinfo: inmemory
+http:
+    addr: :5000
