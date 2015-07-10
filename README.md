@@ -14,16 +14,10 @@ Docker-Registry v2 for small teams.
 
 ## Usage
 
-Build services:
-
-```sh
-docker-compose build
-```
-
 Start Registry in the background:
 
 ```sh
-docker-compose start registry
+docker-compose up -d
 ```
 
 ## Updating the Docker-Registry version
