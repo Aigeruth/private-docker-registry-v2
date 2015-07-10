@@ -4,9 +4,12 @@ data:
     - /data
   command: /bin/bash -c 'touch /data/.permission && chown -R www-data:www-data /data'
 registry:
-  build: registry/
+  image: registry:2
   volumes_from:
     - data
+  volumes:
+    - config.yml:/go/src/github.com/docker/distribution/cmd/registry/config.yml:ro
   ports:
     - "5000:5000"
+  user: www-data
   restart: always
